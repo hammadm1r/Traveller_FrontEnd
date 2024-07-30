@@ -1,0 +1,71 @@
+.Container{
+    display: flex;
+    max-width: 960px;
+    margin-inline: auto;
+}
+.left-part{
+    flex:1;
+    text-align: center;
+    padding-top: 15px;
+}
+.right-part{
+    flex:3;
+    text-align: center;
+}
+.input-user-img{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.labelImg-Pro{
+    width: 50px;
+    height:50px;
+    border-radius: 100%;
+    border:2px dashed var(--border-color);
+    cursor:pointer;
+}
+.labelImg-Pro .userImg{
+    width: 65%;
+    height:65%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.inputImg{
+    display: none;
+}
+input{
+    display: block;
+    padding: 4px 8px;
+    width:90%;
+    margin-top: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: medium;
+    font-weight: 400;
+}
+.btn-primery{
+    width:fit-content;
+}
+form{
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 20px;
+}
+.delete-account{
+    margin-top: 50px ;
+    background-color: red;
+    border: none;
+  color:#ffffff;
+  font-weight: bold;
+  padding:10px 40px;
+  border-radius:4px;
+  cursor:pointer;
+}
+.delete-account:hover{
+    background-color: #cf1f1c;
+  }
+  .delete-account:active{
+    background-color: #7e2008;
+  }
+

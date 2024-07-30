@@ -1,0 +1,17 @@
+.Follower{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:60px;
+    border: 1px solid var(--border-color);
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    background-color: #CDD7E5;
+}
+.userInfo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
