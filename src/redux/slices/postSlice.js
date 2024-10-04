@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import {axiosClient} from "../../utils/axiosClient"
 import { setLoading } from "./appConfigSlice";
-export const getUserProfile = createAsyncThunk("user/getUserProfile",async (body) =>{
+export const getUserProfile = createAsyncThunk("user/getUserProfile",async () =>{
     try {
-        const response = await axiosClient.post("/user/getUserProfile", body);
+        const response = await axiosClient.post("/user/getUserProfile");
         return response.result;
     } catch (error) {
         return Promise.reject(error);
@@ -23,7 +23,7 @@ export const likeAndUnlikePost = createAsyncThunk('post/likeAndUnlike', async (b
 const postsSlice = createSlice({
     name: "postsSlice",
     initialState:{
-        userProfile:{}
+        UserProfile:{}
     },
     extraReducers: (builder) =>{
         builder.addCase(getUserProfile.fulfilled,(state,action) =>{
@@ -31,9 +31,7 @@ const postsSlice = createSlice({
     })
     .addCase(likeAndUnlikePost.fulfilled,(state,action)=>{
         const post = action.payload;
-        console.log('Like Post')
         const index = state?.UserProfile?.posts?.findIndex(item => item._id === post._id);
-        console.log('yelo');
         if( index !== -1){
             state.UserProfile.posts[index]= post;
         }

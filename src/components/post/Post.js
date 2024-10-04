@@ -23,6 +23,7 @@ function Post({post}) {
             type:TOAST_SUCCESS,
             message:'Liked or Unliked'
         }))
+        
         dispatch(likeAndUnlikePost({
             postId: post._id,
         }))
